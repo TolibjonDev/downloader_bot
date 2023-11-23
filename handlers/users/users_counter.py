@@ -15,8 +15,3 @@ async def show_bot_users(msg: types.Message):
             ch_count = len(data['channels']['id'])
         with open("data.json", 'rb') as file:
             await msg.answer_document(document=file, caption=f"<b>All users id:</b>\n---------------\nUsers count: {users_count}\nGroups count: {gr_count}\nChannels count: {ch_count}")
-            users_count = len(data['users'])
-            gr_count = len(data['groups'])
-            ch_count = len(data['channels'])
-        with open("data.json", 'rb') as file:
-            await msg.answer_document(document=file, caption=f"<b>All users id:</b>\n---------------\nUsers count: {users_count}\nGroups count: {gr_count}\nChannels count: {ch_count}")
