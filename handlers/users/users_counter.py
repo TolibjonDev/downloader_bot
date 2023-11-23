@@ -10,8 +10,17 @@ async def show_bot_users(msg: types.Message):
         await msg.answer("salom Admin")
         with open('data.json', 'r') as f:
             data = json.load(f)
+<<<<<<< HEAD
             users_count = len(data['users']['id'])
             gr_count = len(data['groups']['id'])
             ch_count = len(data['channels']['id'])
         with open("data.json", 'rb') as file:
             await msg.answer_document(document=file, caption=f"<b>All users id:</b>\n---------------\nUsers count: {users_count}\nGroups count: {gr_count}\nChannels count: {ch_count}")
+=======
+            users_count = len(data['users'])
+            gr_count = len(data['groups'])
+            ch_count = len(data['channels'])
+        with open("data.json", 'rb') as file:
+            await msg.answer_document(document=file, caption=f"<b>All users id:</b>\n---------------\nUsers count: {users_count}\nGroups count: {gr_count}\nChannels count: {ch_count}")
+          
+>>>>>>> a03cb34b6b4fca7345425a0bf624318f7c22dc9c
