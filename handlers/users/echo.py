@@ -26,7 +26,7 @@ async def bot_echo(message: types.Message):
             author = yt.author
             caption = f"<b>ℹ️ Nomi</b>: {title}\n"
             caption += f"<b>📹 Youtube kanal:</b> <a href='{channel}'>{author}</a>\n"
-            caption += "--------------------------"
+            caption += "--------------------------\n"
             caption += f"<b>👨🏻‍💻 Admin:</b> @Saidkodirov"
             buffer.seek(0)
             await message.answer_audio(audio=buffer, caption=caption)
